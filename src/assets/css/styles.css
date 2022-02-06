@@ -21,6 +21,10 @@
   display: "block";
   color: "white"
 }
+
+.tableHeader {
+  padding: 5;
+}
   
   a:hover {
     text-decoration: none;

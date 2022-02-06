@@ -56,14 +56,16 @@ const TopMenu = () => {
             </Typography>
           </MenuItem>
         </Link>
+        <Link to="/crypto" style={linkStyle}>
+          <MenuItem>
+            <Typography variant="h6" className={classes.title}>
+              Crypto
+            </Typography>
+          </MenuItem>
+        </Link>
         <MenuItem>
           <Typography variant="h6" className={classes.title}>
             Weather
-          </Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Crypto
           </Typography>
         </MenuItem>
         <MenuItem>

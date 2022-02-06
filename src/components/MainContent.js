@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Code from "../pages/code/Container";
 import Radio from "../pages/radio/Radio";
+import Crypto from "../pages/crypto/Crypto";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
@@ -20,12 +21,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Content(props) {
-  if (props.page === "code") {
-    return <Code />;
-  }
-
-  if (props.page === "radio") {
-    return <Radio />;
+  switch (props.page) {
+    case "code":
+      return <Code />;
+    case "radio":
+      return <Radio />;
+    case "crypto":
+      return <Crypto />;
+    default:
+      return <Radio />;
   }
 }
 
