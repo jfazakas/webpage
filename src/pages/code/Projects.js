@@ -3,6 +3,7 @@ import marinaParkingImg from "./images/marina_parking_opt.jpg";
 import togitalImg from "./images/togital_opt.jpg";
 import u3cImg from "./images/pexels-photomix-company-106344_opt.jpg";
 import bmwImg from "./images/bmw.jpg";
+import webdevImg from "./images/webdev.jpg";
 
 const Projects = () => {
   return (
@@ -87,6 +88,19 @@ const Projects = () => {
             and PostgreSQL.
           </p>
           <a className="btn" href="http://intersoft.nl" target="_blank">
+            View company
+          </a>
+        </section>
+
+        <section className="project-item">
+          <img className="img" src={webdevImg} alt="Web Development Services" />
+          <h3>Web Development Services </h3>
+          <p>
+            Design, build and support of web applications, e-commerce websites
+            and presentation websites for startups using Wordpress, Joomla,
+            HTML, CSS, JavaScript, ExtJs, PHP, and MySQL.
+          </p>
+          <a className="btn" href="https://www.brakar.no/" target="_blank">
             View company
           </a>
         </section>

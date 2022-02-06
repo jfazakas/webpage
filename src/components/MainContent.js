@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
 import Code from "../pages/code/Container";
+import Radio from "../pages/radio/Container";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
@@ -27,7 +28,7 @@ function MainContent() {
     <main className={classes.fullWidth}>
       <div className={classes.toolbar} />
       <div className={classes.content}>
-        <Code />
+        <Radio />
       </div>
     </main>
   );
