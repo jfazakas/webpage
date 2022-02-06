@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import "./App.css";
 import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <Home />
+    <div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home content="radio" />} />
+          <Route exact path="/radio" element={<Home content="radio" />} />
+          <Route exact path="/code" element={<Home content="code" />} />
+        </Routes>
+      </Router>
+    </div>
   );
-};
-  
+}

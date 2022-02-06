@@ -17,9 +17,10 @@
     line-height: 1.5;
   }
   
-  /* a {
-    color: #ffe66d;
-  } */
+.menuItemLink {
+  display: "block";
+  color: "white"
+}
   
   a:hover {
     text-decoration: none;
@@ -115,7 +116,6 @@
   -------------------------------*/
   
   .education {
-    background-image: url(images/joanna-kosinska-unsplash.jpg);
     background-size: cover;
     background-position: top right;
     padding-bottom: 100px;

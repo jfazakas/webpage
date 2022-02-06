@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -24,6 +25,11 @@ const useStyles = makeStyles((theme) => ({
 
 const TopMenu = () => {
   const classes = useStyles();
+  const linkStyle = {
+    textDecoration: "none",
+    display: "block",
+    color: "white",
+  };
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -36,16 +42,20 @@ const TopMenu = () => {
         >
           <MenuIcon />
         </IconButton>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Profile
-          </Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Radio
-          </Typography>
-        </MenuItem>
+        <Link to="/code" style={linkStyle}>
+          <MenuItem>
+            <Typography variant="h6" className={classes.title}>
+              Profile
+            </Typography>
+          </MenuItem>
+        </Link>
+        <Link to="/radio" style={linkStyle}>
+          <MenuItem>
+            <Typography variant="h6" className={classes.title}>
+              Radio
+            </Typography>
+          </MenuItem>
+        </Link>
         <MenuItem>
           <Typography variant="h6" className={classes.title}>
             Weather

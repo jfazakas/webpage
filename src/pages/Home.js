@@ -11,14 +11,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const Home = (props) => {
   const classes = useStyles();
+  const content = props.content || "radio";
 
   return (
     <div className={classes.root}>
       <TopMenu />
       <SideMenu />
-      <MainContent />
+      <MainContent page={content} />
       <Footer />
     </div>
   );

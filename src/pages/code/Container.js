@@ -3,7 +3,7 @@ import Header from "./Header";
 import Projects from "./Projects";
 
 const Container = () => {
-  require("./styles.css");
+  require("../../assets/css/styles.css");
 
   return (
     <div className="body">
