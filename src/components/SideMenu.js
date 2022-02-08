@@ -36,6 +36,7 @@ const SideMenu = () => {
       open={true}
       variant="permanent"
       anchor="left"
+      open={false}
       className={classes.drawer}
       classes={{
         paper: classes.drawerPaper,

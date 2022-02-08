@@ -16,6 +16,10 @@
     font-size: 15px;
     line-height: 1.5;
   }
+
+.fullHeight {
+  height: 100%;
+}
   
 .menuItemLink {
   display: "block";
@@ -144,6 +148,14 @@
   .contact-list a {
     padding: 15px;
     display: inline-block;
+  }
+
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
   }
   
   /* Responsive

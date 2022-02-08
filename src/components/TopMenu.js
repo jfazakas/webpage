@@ -12,8 +12,8 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
+    // width: `calc(100% - ${drawerWidth}px)`,
+    // marginLeft: drawerWidth,
   },
   menuButton: {
     marginRight: theme.spacing(5),
@@ -81,17 +81,6 @@ const TopMenu = () => {
       </Toolbar>
     </AppBar>
   );
-  // return (
-  //   <AppBar position="fixed" className={classes.appBar}>
-  //     <Toolbar>
-  //       <MenuItem>
-  //         <Typography variant="h6" className={classes.title}>
-  //           About
-  //         </Typography>
-  //       </MenuItem>
-  //     </Toolbar>
-  //   </AppBar>
-  // );
 };
 
 export default TopMenu;

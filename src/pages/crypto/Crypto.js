@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "./Header";
-import Content from "./Content";
+import CryptoHeader from "./CryptoHeader";
+import CryptoTable from "./CryptoTable";
 
 const Crypto = () => {
   require("../../assets/css/styles.css");
 
   return (
     <div className="body">
-      <Header />
-      <Content />
+      <CryptoHeader />
+      <CryptoTable />
     </div>
   );
 };

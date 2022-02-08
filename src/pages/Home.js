@@ -18,7 +18,7 @@ const Home = (props) => {
   return (
     <div className={classes.root}>
       <TopMenu />
-      <SideMenu />
+      {/* <SideMenu /> */}
       <MainContent page={content} />
       <Footer />
     </div>

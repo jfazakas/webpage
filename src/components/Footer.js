@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: "auto",
     bottom: 0,
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
+    // width: `calc(100% - ${drawerWidth}px)`,
+    // marginLeft: drawerWidth,
   },
   menuButton: {
     marginRight: theme.spacing(2),
