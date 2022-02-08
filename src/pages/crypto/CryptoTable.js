@@ -3,6 +3,8 @@ import axios from "axios";
 import ReactTable from "../../components/ReactTable";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Styles from "./CryptoStyles";
+import NumberRangeColumnFilter from "../../components/table/filter/NumberRangeColumnFilter";
+import SliderColumnFilter from "../../components/table/filter/SliderColumnFilter";
 
 const CryptoTable = () => {
   const [tableData, setTableData] = useState([]);
@@ -11,11 +13,13 @@ const CryptoTable = () => {
       Header: "Rank",
       accessor: "rank",
       className: "rank",
+      disableFilters: true,
     },
     {
-      Header: "Symbol",
-      accessor: "symbol",
-      className: "symbol",
+      Header: "Logo",
+      accessor: "logo",
+      disableFilters: true,
+      className: "centered",
       Cell: ({ value, row }) => {
         return (
           <a href={row.original.websiteUrl} alt={value}>
@@ -25,17 +29,24 @@ const CryptoTable = () => {
       },
     },
     {
+      Header: "Symbol",
+      accessor: "symbol",
+      className: "centered",
+      filter: "fuzzyText",
+    },
+    {
       Header: "Name",
       accessor: "name",
-      className: "symbol",
+      className: "centered",
       style: {
         width: 220,
       },
     },
     {
       Header: "Price",
+      Filter: NumberRangeColumnFilter,
       accessor: "price",
-      className: "alignRight",
+      className: "centered",
       style: {
         width: 120,
       },
@@ -44,9 +55,10 @@ const CryptoTable = () => {
       },
     },
     {
-      Header: "Change/Day",
+      Header: "% / Day",
       accessor: "priceChange1d",
-      className: "alignRight",
+      className: "centered",
+      Filter: SliderColumnFilter,
       Cell: ({ value }) => (
         <span className={value < 0 ? "red" : "green"}>{value}</span>
       ),

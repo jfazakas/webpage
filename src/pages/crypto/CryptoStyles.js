@@ -9,7 +9,7 @@ const Styles = styled.div`
     text-align: center;
     font-weight: bold;
   }
-  .symbol {
+  .centered {
     text-align: center;
   }
   .alignRight {
