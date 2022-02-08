@@ -1,63 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styled from "styled-components";
 import ReactTable from "../../components/ReactTable";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Styles from "./CryptoStyles";
 
 const CryptoTable = () => {
   const [tableData, setTableData] = useState([]);
-  const Styles = styled.div`
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-
-    .rank {
-      text-align: center;
-      font-weight: bold;
-    }
-    .symbol {
-      text-align: center;
-    }
-    .alignRight {
-      text-align: right;
-    }
-
-    .user {
-      background-color: blue;
-      color: white;
-    }
-
-    thead {
-      background-color: rgb(44, 44, 44);
-      color: white;
-      text-align: center;
-    }
-
-    table {
-      border-spacing: 0;
-      border: 1px solid black;
-
-      tr {
-        :last-child {
-          td {
-            border-bottom: 0;
-          }
-        }
-      }
-
-      th,
-      td {
-        margin: 0;
-        padding: 0.5rem;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-
-        :last-child {
-          border-right: 0;
-        }
-      }
-    }
-  `;
-
   const columns = [
     {
       Header: "Rank",
@@ -92,7 +40,7 @@ const CryptoTable = () => {
         width: 120,
       },
       Cell: ({ value }) => {
-        return Number.parseFloat(value.toFixed(2)).toLocaleString("ro-RO");
+        return Number.parseFloat(value.toFixed(2)).toLocaleString("hu-HU");
       },
     },
     {
@@ -118,9 +66,12 @@ const CryptoTable = () => {
   }, []);
 
   return (
-    <Styles>
-      <ReactTable columns={columns} data={tableData} />;
-    </Styles>
+    <>
+      <CssBaseline />
+      <Styles>
+        <ReactTable columns={columns} data={tableData} />
+      </Styles>
+    </>
   );
 };
 
