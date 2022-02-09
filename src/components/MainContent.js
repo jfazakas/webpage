@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Code from "../pages/code/Container";
+import Code from "../pages/code/Code";
 import Radio from "../pages/radio/Radio";
 import Crypto from "../pages/crypto/Crypto";
 
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Content(props) {
+const Page = (props) => {
   switch (props.page) {
     case "code":
       return <Code />;
@@ -31,19 +31,19 @@ function Content(props) {
     default:
       return <Radio />;
   }
-}
+};
 
-function MainContent(props) {
+const MainContent = (props) => {
   const classes = useStyles();
 
   return (
     <main className={classes.fullWidth}>
       <div className={classes.toolbar} />
       <div className={classes.content}>
-        <Content page={props.page} />
+        <Page page={props.page} />
       </div>
     </main>
   );
-}
+};
 
 export default MainContent;

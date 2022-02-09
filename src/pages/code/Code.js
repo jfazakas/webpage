@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Projects from "./Projects";
 
-const Container = () => {
+const Code = () => {
   require("../../assets/css/styles.css");
 
   return (
@@ -13,4 +13,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default Code;

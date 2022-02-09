@@ -16,12 +16,16 @@ const Home = (props) => {
   const content = props.content || "radio";
 
   return (
-    <div className={classes.root}>
-      <TopMenu />
-      {/* <SideMenu /> */}
-      <MainContent page={content} />
-      <Footer />
-    </div>
+    <>
+      <div className={classes.toolbar}>
+        <TopMenu />
+      </div>
+      <div className={classes.root}>
+        {/* <SideMenu /> */}
+        <MainContent page={content} />
+        <Footer />
+      </div>
+    </>
   );
 };
 

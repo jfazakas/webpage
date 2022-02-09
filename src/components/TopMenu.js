@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/SettingsInputAntennaSharp";
 import { MenuItem } from "@material-ui/core";
+import topMenuItems from "../config/topMenuItems";
 
 const drawerWidth = 240;
 
@@ -31,53 +32,38 @@ const TopMenu = () => {
     color: "white",
   };
 
+  const IconButtonCmp = () => {
+    return (
+      <IconButton
+        edge="start"
+        className={classes.menuButton}
+        color="inherit"
+        aria-label="menu"
+      >
+        <MenuIcon />
+      </IconButton>
+    );
+  };
+
+  const TopMenuList = ({ items }) => (
+    <>
+      {items.map((item, index) => (
+        <Link to={item.url} style={linkStyle} key={index}>
+          <MenuItem key={index}>
+            <Typography variant="h6" className={classes.title}>
+              {item.name}
+            </Typography>
+          </MenuItem>
+        </Link>
+      ))}
+    </>
+  );
+
   return (
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar position="sticky" className={classes.appBar}>
       <Toolbar>
-        <IconButton
-          edge="start"
-          className={classes.menuButton}
-          color="inherit"
-          aria-label="menu"
-        >
-          <MenuIcon />
-        </IconButton>
-        <Link to="/code" style={linkStyle}>
-          <MenuItem>
-            <Typography variant="h6" className={classes.title}>
-              Profile
-            </Typography>
-          </MenuItem>
-        </Link>
-        <Link to="/radio" style={linkStyle}>
-          <MenuItem>
-            <Typography variant="h6" className={classes.title}>
-              Radio
-            </Typography>
-          </MenuItem>
-        </Link>
-        <Link to="/crypto" style={linkStyle}>
-          <MenuItem>
-            <Typography variant="h6" className={classes.title}>
-              Crypto
-            </Typography>
-          </MenuItem>
-        </Link>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Weather
-          </Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Hacks
-          </Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h6" className={classes.title}>
-            Contact
-          </Typography>
-        </MenuItem>
+        <IconButtonCmp />
+        <TopMenuList items={topMenuItems} />
       </Toolbar>
     </AppBar>
   );
