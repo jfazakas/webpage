@@ -13,9 +13,6 @@ const SliderColumnFilter = ({
       min = Math.min(row.values[id], min);
       max = Math.max(row.values[id], max);
     });
-    console.log(preFilteredRows);
-    console.log(min);
-    console.log(max);
     return [min, max];
   }, [id, preFilteredRows]);
 

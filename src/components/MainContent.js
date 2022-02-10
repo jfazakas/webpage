@@ -5,18 +5,9 @@ import Radio from "../pages/radio/Radio";
 import Crypto from "../pages/crypto/Crypto";
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: theme.mixins.toolbar,
-  title: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
-  },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  fullWidth: {
-    width: "100%",
+    padding: theme.spacing(15),
   },
 }));
 
@@ -37,12 +28,9 @@ const MainContent = (props) => {
   const classes = useStyles();
 
   return (
-    <main className={classes.fullWidth}>
-      <div className={classes.toolbar} />
-      <div className={classes.content}>
-        <Page page={props.page} />
-      </div>
-    </main>
+    <div className={classes.content}>
+      <Page page={props.page} />
+    </div>
   );
 };
 

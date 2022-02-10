@@ -1,69 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/SettingsInputAntennaSharp";
-import { MenuItem } from "@material-ui/core";
-import topMenuItems from "../config/topMenuItems";
-
-const drawerWidth = 240;
+import TopMenuAccountCircleCmp from "./TopMenuAccountCircleCmp";
+import TopMenuButtonCmp from "./TopMenuButtonCmp";
+import TopMenuListCmp from "./TopMenuListCmp";
 
 const useStyles = makeStyles((theme) => ({
-  appBar: {
-    // width: `calc(100% - ${drawerWidth}px)`,
-    // marginLeft: drawerWidth,
-  },
   menuButton: {
-    marginRight: theme.spacing(5),
+    marginRight: theme.spacing(15),
   },
-  title: {
-    flexGrow: 1,
+  accountCircle: {
+    marginLeft: "auto",
   },
 }));
 
 const TopMenu = () => {
   const classes = useStyles();
-  const linkStyle = {
-    textDecoration: "none",
-    display: "block",
-    color: "white",
-  };
-
-  const IconButtonCmp = () => {
-    return (
-      <IconButton
-        edge="start"
-        className={classes.menuButton}
-        color="inherit"
-        aria-label="menu"
-      >
-        <MenuIcon />
-      </IconButton>
-    );
-  };
-
-  const TopMenuList = ({ items }) => (
-    <>
-      {items.map((item, index) => (
-        <Link to={item.url} style={linkStyle} key={index}>
-          <MenuItem key={index}>
-            <Typography variant="h6" className={classes.title}>
-              {item.name}
-            </Typography>
-          </MenuItem>
-        </Link>
-      ))}
-    </>
-  );
 
   return (
-    <AppBar position="sticky" className={classes.appBar}>
+    <AppBar position="fixed">
       <Toolbar>
-        <IconButtonCmp />
-        <TopMenuList items={topMenuItems} />
+        <TopMenuButtonCmp classes={classes} />
+        <TopMenuListCmp classes={classes} />
+        <TopMenuAccountCircleCmp classes={classes} />
       </Toolbar>
     </AppBar>
   );

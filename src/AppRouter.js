@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainContent from "./components/MainContent";
 import TopMenu from "./components/TopMenu";
 
-const RoutedApp = () => {
+const AppRouter = () => {
   return (
     <>
       <Router>
@@ -18,4 +18,4 @@ const RoutedApp = () => {
   );
 };
 
-export default RoutedApp;
+export default AppRouter;

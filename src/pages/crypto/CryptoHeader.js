@@ -13,8 +13,6 @@ const CryptoHeader = () => {
         >
           <strong>here</strong>.
         </a>{" "}
-        This page was created to experiment with React MaUTable, different
-        filter types (like Fuzzy, MinMax, Slider) and styled-components.
       </p>
     </div>
   );
