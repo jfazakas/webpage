@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../home/Header";
+import Content from "../home/Content";
 
 const Home = () => {
   require("../../assets/css/styles.css");
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div className="body">
       <Header />
+      <Content />
     </div>
   );
 };
