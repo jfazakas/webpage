@@ -7,7 +7,9 @@ import TopMenuListCmp from "./TopMenuListCmp";
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
-    marginRight: theme.spacing(15),
+    marginRight: theme.spacing(20),
+    fontSize: 38,
+    fontFamily: "Montserrat",
   },
   accountCircle: {
     marginLeft: "auto",

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Code from "../pages/code/Code";
 import Radio from "../pages/radio/Radio";
 import Crypto from "../pages/crypto/Crypto";
+import Home from "../pages/home/Home";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -13,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Page = (props) => {
   switch (props.page) {
+    case "home":
+      return <Home />;
     case "code":
       return <Code />;
     case "radio":

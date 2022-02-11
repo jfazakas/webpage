@@ -10,7 +10,8 @@ const TopMenuButtonCmp = ({ classes }) => {
       color="inherit"
       aria-label="menu"
     >
-      <SettingsInputAntennaIcon />
+      {/* <SettingsInputAntennaIcon /> */}
+      YO6GZI
     </IconButton>
   );
 };
