@@ -1,5 +1,11 @@
 export const topMenuItems = [
   {
+    name: "Home",
+    url: "/home",
+    icon: "",
+    enabled: true,
+  },
+  {
     name: "Radio",
     url: "/radio",
     icon: "",
@@ -15,7 +21,7 @@ export const topMenuItems = [
     name: "Crypto",
     url: "/crypto",
     icon: "",
-    enabled: true,
+    enabled: false,
   },
 ];
 

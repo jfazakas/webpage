@@ -1,6 +1,6 @@
-import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@material-ui/core/IconButton";
-// import MenuIcon from "@material-ui/icons/SettingsInputAntennaSharp";
+import SettingsInputAntennaIcon from "@mui/icons-material/SettingsInputAntenna";
+// import MenuIcon from "@mui/icons-material/Menu";
 
 const TopMenuButtonCmp = ({ classes }) => {
   return (
@@ -10,7 +10,7 @@ const TopMenuButtonCmp = ({ classes }) => {
       color="inherit"
       aria-label="menu"
     >
-      <MenuIcon />
+      <SettingsInputAntennaIcon />
     </IconButton>
   );
 };

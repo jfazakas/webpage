@@ -23,7 +23,7 @@ const TopMenuAccountCircleCmp = ({ classes }) => {
   const nodeRef = useRef(null);
 
   return (
-    <CSSTransition nodeRef={nodeRef}>
+    <CSSTransition nodeRef={nodeRef} timeout={0}>
       <div ref={nodeRef} className={classes.accountCircle}>
         <IconButton
           ref={anchorEl}
