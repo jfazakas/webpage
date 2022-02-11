@@ -6,13 +6,6 @@ import CottageIcon from "@mui/icons-material/Cottage";
 import { MenuItem } from "@material-ui/core";
 import { topMenuItems } from "../config/topMenuItems";
 
-const linkStyle = {
-  textDecoration: "none",
-  display: "block",
-  color: "white",
-  paddingLeft: 20,
-};
-
 const getIconByIndex = (index) => {
   switch (index) {
     case 0:
@@ -31,9 +24,9 @@ const TopMenuListCmp = ({ classes }) => {
       {topMenuItems.map(
         (item, index) =>
           item.enabled && (
-            <Link to={item.url} style={linkStyle} key={index}>
+            <Link to={item.url} className={classes.menuItems} key={index}>
               <MenuItem key={index}>
-                <Typography variant="h6" className={classes.title}>
+                <Typography variant="h6" className={classes.menuItemsTitle}>
                   {getIconByIndex(index)} {item.name}
                 </Typography>
               </MenuItem>
