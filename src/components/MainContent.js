@@ -5,6 +5,7 @@ import Radio from "../pages/radio/Radio";
 import Crypto from "../pages/crypto/Crypto";
 import Home from "../pages/home/Home";
 import LogInPage from "../authentication/pages/LogInPage";
+import ScrollToTop from "./ScrollToTop";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -36,6 +37,7 @@ const MainContent = (props) => {
   return (
     <div className={classes.content}>
       <Page page={props.page} />
+      <ScrollToTop />
     </div>
   );
 };

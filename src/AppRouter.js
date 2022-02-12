@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainContent from "./components/MainContent";
 import TopMenu from "./components/TopMenu";
 
-const AppRouter = () => {
+const AppRouter = (props) => {
   return (
     <>
       <Router>
-        <TopMenu />
+        <TopMenu id="back-to-top-anchor" />
         <Routes>
           <Route exact path="/" element={<MainContent page="home" />} />
           <Route exact path="/home" element={<MainContent page="home" />} />
