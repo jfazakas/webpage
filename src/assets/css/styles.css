@@ -165,6 +165,32 @@
     color: red;
   }
   
+  /* Authenticate */
+
+  .login-content-wrap {
+    /* width: 50%; */
+    /* margin: 0 auto; */
+    /* padding: 30px 0 30px 15px; */
+  }
+
+  .login-field-wrap {
+    padding-bottom: 15px;
+  }
+
+  .login-button {
+    /* color: white; */
+    /* width: 35%; */
+  }
+
+  .google-button-container {
+    padding: 30px;
+}
+
+  .textfield {
+    padding: 15px 0;
+  }
+
+
   /* Responsive
   -------------------------------*/
   @media screen and (min-width: 750px) {

@@ -4,6 +4,7 @@ import Code from "../pages/code/Code";
 import Radio from "../pages/radio/Radio";
 import Crypto from "../pages/crypto/Crypto";
 import Home from "../pages/home/Home";
+import LogInPage from "../authentication/pages/LogInPage";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -22,6 +23,8 @@ const Page = (props) => {
       return <Radio />;
     case "crypto":
       return <Crypto />;
+    case "login":
+      return <LogInPage />;
     default:
       return <Radio />;
   }

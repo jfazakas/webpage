@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import IconButton from "@material-ui/core/IconButton";
 import { Menu, MenuItem } from "@material-ui/core";
@@ -6,7 +7,6 @@ import { accountCircleMenuItems } from "../config/topMenuItems";
 import { CSSTransition } from "react-transition-group";
 
 const TopMenuAccountCircleCmp = ({ classes }) => {
-  // const anchorEl = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -48,9 +48,11 @@ const TopMenuAccountCircleCmp = ({ classes }) => {
         >
           {accountCircleMenuItems &&
             accountCircleMenuItems.map((item, key) => (
-              <MenuItem onClick={handleClose} key={key}>
-                {item.enabled && item.name}
-              </MenuItem>
+              <Link to="/login" className={classes.auth} key={key}>
+                <MenuItem onClick={handleClose} key={key}>
+                  {item.enabled && item.name}
+                </MenuItem>
+              </Link>
             ))}
         </Menu>
       </div>

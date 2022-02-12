@@ -13,6 +13,7 @@ const AppRouter = () => {
           <Route exact path="/radio" element={<MainContent page="radio" />} />
           <Route exact path="/code" element={<MainContent page="code" />} />
           <Route exact path="/crypto" element={<MainContent page="crypto" />} />
+          <Route exact path="/login" element={<MainContent page="login" />} />
         </Routes>
       </Router>
     </>

@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 14,
     },
   },
+  auth: {
+    textDecoration: "none",
+  },
   menuItems: {
     textDecoration: "none",
     display: "block",
