@@ -161,6 +161,7 @@ const LogInPageContent = () => {
           <GoogleButton
             type="light"
             // disabled={!googleOAuthUrl}
+            disabled
             onClick={() => {
               window.location.href = googleOAuthUrl;
             }}
